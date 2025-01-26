@@ -7,7 +7,7 @@ RUN apk add --no-cache git  build-base linux-headers && \
  cd udp2raw-tunnel && \
  make dynamic
 
-FROM alpine:3.6
+FROM alpine:latest
 RUN apk add --no-cache libstdc++ iptables
 COPY --from=builder /udp2raw-tunnel/udp2raw_dynamic /bin/
 ENTRYPOINT [ "/bin/udp2raw_dynamic" ]
