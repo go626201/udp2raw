@@ -1,4 +1,4 @@
-FROM alpine:3.6 as builder
+FROM alpine:latest as builder
 
 WORKDIR /
 
